@@ -5,6 +5,7 @@ from os import system, sys
 from time import sleep
 import threading
 from colorama import Fore
+os.system("pip install -r requirements.txt")
 
 print("\t\033[1;31m Super Fast         Termux Edition\n\n")
 animation = '''
