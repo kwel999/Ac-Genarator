@@ -5,7 +5,6 @@ from os import system, sys
 from time import sleep
 import threading
 from colorama import Fore
-os.system("pip install -r requirements.txt")
 
 print("\t\033[1;31m Super Fast         Termux Edition\n\n")
 animation = '''
@@ -42,10 +41,11 @@ import threading
 from colorama import Fore
 
 try:
-    import samino, pyfiglet
+    import samino, pyfiglet, flask
 except:
     os.system('pip install samino==2.4.6')
     os.system('pip install pyfiglet')
+    os.system('pip install flask') 
     import samino, pyfiglet
 else:
     os.system('clear')
@@ -167,7 +167,7 @@ else:
     keep_alive()
     client = samino.Client()
     com = client.get_from_link(community_link).comId
-    file = open('accounts19.json')
+    file = open('accounts.json')
     date = json.load(file)
 
     def threadit(email: str, password: str, device: str):
@@ -181,7 +181,7 @@ else:
             for q in range(24):
                 local.send_active_time(tz=(tzr()), timers=(trr()))
                 print(A + f"{q + 1} Coin Generating - OK")
-                time.sleep(3)
+                time.sleep(12)
             else:
                 print(H + '\nCoins Genarated !! from - ',email)
 
